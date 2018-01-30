@@ -1,30 +1,14 @@
-# demo
+# H5站点
 
-> A Vue.js project
+## 本项目基于 vue-cli命令行工具快速创建基于webpack的Vue项目
 
-## Build Setup
+1. 首先是你已经安装了nodejs,然后全局安装vue-cli,在cmd中键入 npm install --global vue-cli;
+1. 安装完成后,创建自己的工作空间,在cmd中切换到项目空间。使用命令行创建项目：vue init webpaack vueproject;vueproject就是你的项目名称。
+1. 命令输入后,会进入安装阶段,需要用户输入一些信息,可自行选择安装.
 
-``` bash
-# install dependencies
-npm install
+### 如何使用
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+1. 将项目clone到本地 ，git clone 项目地址；
+1. 执行npm install安装所有依赖（可以用国内的npm镜像，以防止某些资源被墙）;
+1. 安装完所有依赖后,执行npm run dev ,可以在本地localhost:8080端口打开项目；
+1. npm run build ,webpack打包命令。 
