@@ -5,6 +5,7 @@
         <ul v-for="(item,index) in dataContent" :key='index'> 
             <li>Name:{{item.name}},Age:{{item.age}}</li>
         </ul>
+        <el-button primary @click="logout">clear</el-button>
     </div>
 </template>
 <script>
@@ -15,7 +16,8 @@ export default {
             title:'Welcome Home',
             name:'',
             url:'http://127.0.0.1:3001/content',
-            dataContent:[]
+            dataContent:[],
+            token:''
         }
     },
     created(){
@@ -35,6 +37,10 @@ export default {
                 console.log(response.data);
                 this.dataContent = response.data;
             })
+        },
+        logout(){
+            localStorage.removeItem('name');
+            this.$router.push({path:'/login'});
         }
     }
 }

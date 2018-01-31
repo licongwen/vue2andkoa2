@@ -8,7 +8,6 @@
             <el-input class="inp" type="password" placeholder="Password" prefix-icon="el-icon-message" v-model='password'></el-input>
             <el-button type='primary' class="btnL" @click="login" :loading='isload'>Login</el-button>
             <el-button type='primary' class="btnL" @click="register">Register</el-button>
-           
         </div>
          <p class="error" v-show='showError'>{{errorMessage}}</p>
     </div>
@@ -78,8 +77,8 @@ export default {
         text-align: center;
     }
     .loginContent{
-        width: 40%;
-        margin: 1rem auto;
+        width: 80%;
+        margin: 1rem auto 0rem;
     }
     .loginContent .inp{
         margin: 1rem 0;
@@ -93,5 +92,7 @@ export default {
         width: 80%;
         margin: 0 auto;
         text-align: left;
+        font-size: 12px;
+        padding: 0;
     }
 </style>

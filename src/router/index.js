@@ -4,10 +4,12 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Register from '@/components/Register'
+import PageNotFound from'@/components/NotFoundPage'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -21,13 +23,20 @@ export default new Router({
     {
       path:'/home',
       name:'Home',
-      component:Home
-    }
-    ,
+      component:Home,
+      meta:{
+        requireAuth:true
+      }
+    },
     {
       path:'/register',
       name:'Register',
       component:Register
+    },
+    {
+      path:'*',
+      name:'PageNotFound',
+      component:PageNotFound
     }
   ]
 })
