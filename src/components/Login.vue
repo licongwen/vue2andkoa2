@@ -54,6 +54,7 @@ export default {
                     })
                 }).catch((err)=>{
                     this.isload = false;
+                    this.showError = true;
                 })
             }else{
                 this.showError = true;

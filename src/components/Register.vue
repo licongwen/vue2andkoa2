@@ -71,6 +71,7 @@ export default {
                     this.id='';
                     this.name='';
                     this.password='';
+                    this.conformPassword='';
                     this.email='';
                 })
             }else{

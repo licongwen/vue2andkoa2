@@ -18,17 +18,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-router.beforeEach((to,from,next)=>{
-    const name = localStorage.getItem('name');
-    if(to.matched.some(m=>m.meta.requireAuth)){
-      if(name){
-        next()
-      }else{
-        next({
-          path:'/login'
-        })
-      }
-    }else{
-      next()
-    }
-})

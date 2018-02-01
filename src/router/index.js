@@ -8,12 +8,20 @@ import PageNotFound from'@/components/NotFoundPage'
 
 Vue.use(Router)
 
-export default new Router({
+ const router = new Router({
   mode:'history',
   routes: [
     {
       path: '/',
       redirect:'/login'
+    },
+    {
+      path:'/helloworld',
+      name:'HelloWorld',
+      component:HelloWorld,
+      meta:{
+        requireAuth:true
+      }
     },
     {
       path:'/login',
@@ -40,3 +48,19 @@ export default new Router({
     }
   ]
 })
+//路由守卫 未登陆时自动自动跳转到登陆页面
+router.beforeEach((to,from,next)=>{
+    const token = localStorage.getItem('token');
+      if(to.meta.requireAuth){
+        if(token){
+          next()
+        }else{
+          next({
+          path:'/login',
+        })
+      }
+    }else{
+      next()
+  }
+})
+export default router;

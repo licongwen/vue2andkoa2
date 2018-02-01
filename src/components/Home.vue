@@ -1,11 +1,12 @@
 <template>
     <div>
         <p>{{title}}</p>
+        <p>{{token}}</p>
         <p>{{name}}</p>
         <ul v-for="(item,index) in dataContent" :key='index'> 
             <li>Name:{{item.name}},Age:{{item.age}}</li>
         </ul>
-        <el-button primary @click="logout">clear</el-button>
+        <el-button primary @click="logout">LogOut</el-button>
     </div>
 </template>
 <script>
@@ -40,6 +41,7 @@ export default {
         },
         logout(){
             localStorage.removeItem('name');
+            localStorage.removeItem('token');
             this.$router.push({path:'/login'});
         }
     }
