@@ -22,8 +22,8 @@
             </el-input>
         </div>
         <div class="registerBtn">
-            <el-button class="btn1" @click="sub">Submit</el-button>
-            <el-button class="btn2" @click="reset">ReSet</el-button>
+            <el-button class="btn1" @click="reset">ReSet</el-button>
+            <el-button class="btn2" @click="sub">Submit</el-button>
         </div>
     </div>
 </template>
@@ -73,6 +73,12 @@ export default {
                     this.password='';
                     this.conformPassword='';
                     this.email='';
+                    setTimeout(()=>{
+                        this.$router.push({
+                            'path':'/login',
+                        })
+                    },1000)
+                    
                 })
             }else{
                 this.$alert('请输入完整的内容', '注册提示', {
@@ -84,6 +90,7 @@ export default {
             this.id='';
             this.name='';
             this.password='';
+            this.conformPassword='';
             this.email='';
         }
     }
