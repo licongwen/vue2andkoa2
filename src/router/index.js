@@ -4,7 +4,9 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Register from '@/components/Register'
+import Goods from '@/components/Goods'
 import PageNotFound from'@/components/NotFoundPage'
+
 
 Vue.use(Router)
 
@@ -40,6 +42,11 @@ Vue.use(Router)
       path:'/register',
       name:'Register',
       component:Register
+    },
+    {
+      path:'/goods',
+      name:'Goods',
+      component:Goods
     },
     {
       path:'*',
