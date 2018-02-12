@@ -13,9 +13,9 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js'//入口文件，告诉webpack你要编译哪个文件
   },
-  output: {
+  output: {//出口文件，告诉webpack你要把编译后生成的文件放在哪里
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
