@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+//main.js内部对store.js的配置
 import store from '@/store/store.js';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
